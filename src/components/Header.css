@@ -1,0 +1,113 @@
+.container > div > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+  
+  }
+ 
+  .container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  .container {
+    width: 100%;
+    border-radius: 6px;
+   display: block;
+
+    background-color: #8eff75;
+    background: url("https://static.vecteezy.com/packs/media/vectors/term-bg-1-3d6355ab.jpg");
+   
+}
+
+
+@media (min-width: 600px) {
+    .container {
+      width:590px!important;
+      background-color: aqua!important;
+    }
+    .number {
+      font-size: 200px;
+      color: #222406;
+      text-shadow: 2px 3px 18px black;
+    }
+}
+@media (min-width: 368px) {
+    .container {
+        width: 308px!important;
+    }
+
+    .number {
+      font-size: 60px;
+      color: #222406;
+      text-shadow: 2px 3px 18px black;
+    }
+}
+@media (min-width: 1024px) {
+    .container {
+  width: 1200px!important;
+  height: 500px!important;
+  
+    }
+    .number {
+      font-size: 200px;
+      color: #222406;
+      text-shadow: 2px 3px 18px black;
+    }
+}
+
+
+  
+  .text {
+    pointer-events: none;
+    justify-content: start !important;
+    font-family: 'Kanit', sans-serif;
+    line-height: 0px;
+    text-transform: uppercase;
+    z-index: 30;
+  }
+  
+ 
+  
+  .number span {
+    display: inline-block;
+    position: relative;
+    margin-left: 20px;
+  }
+  
+  .slopeBegin {
+    background-color: #9ab01f;
+    clip-path: polygon(20% 0, 70% 0, 50% 100%, 0% 100%);
+  }
+  
+  .slopeEnd {
+    clip-path: polygon(70% 0, 100% 0, 80% 100%, 0% 100%);
+  }
+  
+  .slopeBegin,
+  .slopeEnd {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+  
+  .pink {
+    background: linear-gradient(to right, deeppink 0%, coral 100%);
+  }
+  
+  .teal {
+    background: linear-gradient(to right, SlateBlue 0%, DeepSkyBlue 100%);
+  }
+  
+  .tomato {
+    background: linear-gradient(to right, tomato 0%, gold 100%);
+  }
+  

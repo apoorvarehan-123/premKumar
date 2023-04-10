@@ -1,0 +1,77 @@
+/* .container > div > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+   */
+
+
+  .text {
+    pointer-events: none;
+    justify-content: start !important;
+    font-family: 'Kanit', sans-serif;
+    line-height: 0px;
+    text-transform: uppercase;
+  }
+  
+  .number {
+    font-size: 300px;
+    color: #545864;
+  }
+  
+  .number span {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .slopeBegin {
+    background-color: #000000;
+    clip-path: polygon(70% 0%, 100% 0, 50% 100%, 10% 100%);
+  }
+  
+  .slopeEnd {
+    background-color: #ffffff;
+    clip-path: polygon(100% 20%, 100% 0, 50% 100%, 10% 100%);
+  }
+  
+  .container {
+    width: 1200px!important;
+    height: 560px!important;
+    background: url("https://w0.peakpx.com/wallpaper/208/752/HD-wallpaper-whatsapp-dp-cartoon.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-origin: content-box;
+    
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .container {
+      background-color: rgb(63, 80, 86);
+      width: 340px!important;
+    height: 200px!important;
+    display: none;
+    }
+  }
+
+
+
+  .slopeBegin,
+  .slopeEnd {
+    position: absolute;
+   
+    cursor: pointer;
+  }
+  
+  .pink {
+    background: black;
+  }
+  
+  .teal {
+    background: black;
+  }
+  
+  .tomato {
+    background: black;
+  }
+  
