@@ -7,19 +7,8 @@ import axios from "axios";
 import { CgSoftwareDownload } from "react-icons/cg";
 // import Modal from 'react-modal';
 import { useSpring, animated } from "@react-spring/web";
+import SearchYTKey from "./SearchYTKey";
 
-// const customStyles = {
-//   content: {
-//     top: '50%',
-//     left: '50%',
-//     right: 'auto',
-//     bottom: 'auto',
-//     marginRight: '-50%',
-//     width:500,
-//     height:500,
-//     transform: 'translate(-50%, -50%)',
-//   },
-// };
 
 export default function DownloadVideo() {
   const [inputState, setInputState] = useState("");
@@ -27,21 +16,7 @@ export default function DownloadVideo() {
   const [videoDetail, setVideoDetail] = useState([]);
   const [videoDownload, setVideoDownload] = useState([]);
   const [videoDownloadLink, setVideoDownloadLink] = useState([]);
-  // const [modalIsOpen, setIsOpen] = useState(false);
 
-  // let subtitle;
-  // function openModal() {
-  //   setIsOpen(true);
-  // }
-
-  // function afterOpenModal() {
-
-  //   subtitle.style.color = '#f00';
-  // }
-
-  // function closeModal() {
-  //   setIsOpen(false);
-  // }
  const config= {
     mass: 5,
     friction: 320,
@@ -157,7 +132,7 @@ export default function DownloadVideo() {
       > */}
 
      
-        <animated.div  style={props} className="bg-black m-6 p-4 rounded-md">
+        <animated.div  style={props} className="bg-black  z-40 m-6 p-4 rounded-md">
           {videoDetail.length ? (
             <div className=" flex flex-col items-center">
               <div className="relative my-6">
@@ -172,7 +147,7 @@ export default function DownloadVideo() {
           ) : (
             ""
           )}
-
+  
           {videoDetail[0]?.length && (
             <div className="">
               <div className="flex flex-col  text-black  bg-gray-800 p-5 mx-2 rounded-sm bg-opacity-80">
@@ -198,7 +173,8 @@ export default function DownloadVideo() {
             </div>
           )}
           {videoDownloadLink[0] && (
-            <div className="flex flex-wrap  w-full p-10 ">
+            <div className="flex flex-wrap items-center  w-full h-80  scrollable  overflow-y-scroll my-6 p-10 ">
+              <p className="text-xs mx-4">Download Here--</p>
               {videoDownloadLink[0].map((videLink) => {
                 return (
                   <a
@@ -221,7 +197,9 @@ export default function DownloadVideo() {
               })}
             </div>
           )}
+
         </animated.div>
+        <SearchYTKey/>
     
       {/* </Modal> */}
     </div>
